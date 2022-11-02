@@ -23,6 +23,9 @@ const addMovie = (event) =>{
 
     document.querySelector('ul').appendChild(movie)
     inputField.value = ''
+
+    message.textContent = `You've added ${movieTitle.textContent}.`
+    revealMessage()
 }
 
 
@@ -40,6 +43,7 @@ const crossOffMovie = (event) => {
     } else {
         message.textContent = `You've unwatched ${event.target.textContent}.`
     }
+    revealMessage()
 }
 
 const revealMessage = () => {
